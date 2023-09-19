@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Lilita+One&display=swap');
+:root{
+   --line-border-fill:#7700e6;
+   --line-border-shdow-font:#11101e;
+   --line-border-emp:#f1f1f1f4;
+   --line-border-third:#294a60;
+   --line-border-four:#ebedbad3;
+   --line-border-box-shdow: rgba(0, 0, 0, 0.4);
+   --line-border-box-shdow-less: rgba(0, 0, 0, 0.2);
+
+}
+
+
+* {
+   box-sizing: border-box;
+ }
+ 
+body{
+  background-color: var(--line-border-four);
+    font-family: 'Josefin Sans';
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    overflow-x: hidden;
+    text-align: center;
+ }
+.title{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 900;
+
+  font-size: 4rem;
+  color: var(--line-border-third);
+
+  font-weight: 900;
+}
+
+.box{
+  width: 25rem;
+  height: 12.5rem;
+  background-color: var(--line-border-fill);
+  color: var(--line-border-emp);
+  text-align:center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4%;
+  border-radius: 3%;
+  transform: translateX(-1000%);
+  transition: transform 0.7s 1.0s ease;
+  box-shadow: 0.1rem 0.1rem 0.5rem inset  var(--line-border-box-shdow)
+}
+.box .content{
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 700;
+
+}
+
+.box:nth-of-type(even){
+  background-color: var(--line-border-third);
+  transform: translateX(1000%);
+}
+
+.box.show{
+  transform: translateX(0);
+}
+
+.movie{
+  font-size: 1.8em;
+  position: absolute;
+  color: var(--line-border-four);
+  transform: translateX(-2000%);
+  display: none;
+  transition: transform 0.8s ease-out;
+  z-index: -5;
+  width: 40%;
+}
+.movie.moveName{
+  text-shadow:1px 1px 1px var(--line-border-shdow-font);
+  font-weight: 900;
+  display: block;
+  left:0;
+  margin: auto; 
+  transform: translateX(15%);
+  transition: transform 0.5s 0.5s ease-in-out;
+
+}
+.profile{ 
+  transform: translateX(0);
+  transition: transform 0.8s ease;
+  z-index: -1;
+  box-shadow: -4px 0px 5px var(--line-border-box-shdow-less);
+}
+.profile.move{
+  opacity: 0.95;
+  transform: translateX(12.5rem);
+  transition: transform 0.8s ease, opacity 1.8s ease;
+}
+.content{
+  text-shadow:1px 1px 0.56px var(--line-border-shdow-font);
+  margin:auto ;
+  transition: opacity 0.6s ease;
+}
+.box .content.off{
+  z-index: -100;
+  transition: opacity 0.2s ease;
+}
+
+
+
+
+
+
+
+
+ 
+
+ one{
+  color: var(--line-border-emp);
+ }
+ two{
+  color: var(--line-border-fill);
+ }
+ three{
+  color: var(--line-border-third);
+ }
+
+ oneBk{
+  background-color: var(--line-border-emp);
+ }
+ twoBk{
+  background-color: var(--line-border-fill);
+ }
+ threeBk{
+  background-color: var(--line-border-third);
+ }
