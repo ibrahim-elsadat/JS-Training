@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Josefin+Sans:wght@200;400&family=Lilita+One&display=swap");
+
+:root {
+  --line-border-fill: #7700e6;
+  --line-overlay: rgba(87, 84, 236, 0.7);
+  --line-overlay-second: rgba(43, 43, 43, 0.7);
+  --line-border-shdow-font: #11101e;
+  --line-border-emp: #f1f1f1f4;
+  --line-border-third: #294a60;
+  --line-border-five: rgb(111, 158, 187);
+  --line-border-four: #ebedbad3;
+  --line-border-box-shdow: rgba(0, 0, 0, 0.4);
+  --line-border-box-shdow-less: rgba(0, 0, 0, 0.2);
+  --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --left-btn-hover-color: rgba(87, 84, 236, 1);
+
+  --hover-width: 75%;
+  --other-width: 25%;
+  --some-width: 25%;
+
+  --speed: 1400ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--line-border-third);
+  /* font-family: "Josefin Sans"; */
+  font-family: "Chakra Petch";
+  margin: 0px auto;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--line-border-emp);
+}
+.formAll {
+  background-color: var(--line-border-box-shdow);
+  padding: 20px 40px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.formAll h1 {
+  color: var(--line-border-four);
+  text-align: center;
+}
+.form-control {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: var(--line-border-emp);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-control input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px var(--line-border-emp) solid;
+  /* background-color: #294a60; */
+}
+.form-control label {
+  color: var(--line-border-four);
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  font-size: 1em;
+  font-weight: bold;
+  pointer-events: none;
+}
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  color: var(--line-border-four);
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.1em;
+  min-width: 0.2em;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-21px);
+  border-bottom-color: var(--line-border-four);
+}
